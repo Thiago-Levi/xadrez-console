@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace xadrez_console
+
+namespace tabuleiro
 {
     internal class Tabuleiro
     {
@@ -23,6 +19,12 @@ namespace xadrez_console
         public Peca ObterPeca(int linha, int coluna)
         {
             return pecas[linha, coluna];
+        }
+
+        public void InserirPeca(Peca peca, Posicao posicao)
+        {
+            pecas[posicao.linha, posicao.coluna] = peca;
+            peca.posicao = posicao;
         }
 
     }
