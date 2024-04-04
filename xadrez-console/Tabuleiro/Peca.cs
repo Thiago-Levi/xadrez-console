@@ -4,23 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace xadrez_console.Tabuleiro
+namespace xadrez_console
 {
     internal class Peca
     {
-        public Posicao Posicao { get; set; }
-        public Cor Cor {  get; set; }
-        public int QuantidadeDeMovimentos { get; set; }
-        public Tabuleiro Tabuleiro { get; set; }
+        public Posicao posicao { get; set; }
+        public Cor cor {  get; set; }
+        public int quantidadeDeMovimentos { get; set; }
+        public Tabuleiro tabuleiro { get; protected set; }
 
         public Peca(Posicao posicao, Tabuleiro tabuleiro, Cor cor) 
         { 
-            Posicao = posicao;
-            Tabuleiro = tabuleiro;
-            Cor = cor;
-            QuantidadeDeMovimentos = 0;
+            this.posicao = posicao;
+            this.tabuleiro = tabuleiro;
+            this.cor = cor;
+            this.quantidadeDeMovimentos = 0;
         }
         
+       
 
 
     }

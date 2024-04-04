@@ -1,8 +1,10 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using xadrez_console.Tabuleiro;
+using xadrez_console;
 
-Posicao p = new Posicao(3, 4);
 
-Console.WriteLine(p);
+Tabuleiro tabuleiro = new Tabuleiro(8, 8);
+
+Tela.ImprimirTabuleiro(tabuleiro);
+
 
